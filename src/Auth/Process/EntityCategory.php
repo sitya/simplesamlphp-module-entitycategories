@@ -102,12 +102,6 @@ class EntityCategory extends Auth\ProcessingFilter
                 continue;
             }
 
-            Assert::numeric(
-                $index,
-                "Unspecified allowed attributes for the '$value' category.",
-                Error\ConfigurationError::class,
-            );
-
             Assert::isArray(
                 $value,
                 "The list of allowed attributes for category '$index' is not an array.",
